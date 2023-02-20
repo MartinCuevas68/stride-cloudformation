@@ -15,6 +15,12 @@ Resources:
       ManagedPolicyArns:
       - arn:aws:iam::aws:policy/AmazonEKSClusterPolicy
       - arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly
+    Tags:
+      - Key: "LabName"
+        Value: "see tag history for details"
+      - Key: "ManagedBy"
+        Value: "CloudFormation"
+
       
   WorkerNodeIAMRole:
     Type: "AWS::IAM::Role"
@@ -33,3 +39,8 @@ Resources:
       - arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy
       - arn:aws:iam::aws:policy/EC2InstanceProfileForImageBuilderECRContainerBuilds
       - arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly
+    Tags:
+      - Key: "LabName"
+        Value: "see tag history for details"
+      - Key: "ManagedBy"
+        Value: "CloudFormation"
