@@ -3,7 +3,7 @@ Resources:
   EKSIAMRole:
     Type: "AWS::IAM::Role"
     Properties:
-      RoleName: "str8d-cluster-demo-CF"
+      RoleName: "str8d-IAMRole-cluster-demo-CF"
       AssumeRolePolicyDocument:
         Version: "2012-10-17"
         Statement:
@@ -33,7 +33,7 @@ Resources:
               Service: "ec2.amazonaws.com"
             Action: "sts:AssumeRole"
       Path: "/"
-      RoleName: "str8d-workernode-demo-CF"
+      RoleName: "str8d-IAMRole-workernode-demo-CF"
       ManagedPolicyArns:
       - arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy
       - arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy

@@ -5,8 +5,8 @@ Resources:
     Type: 'AWS::EKS::Cluster'
     Properties:
       Name: str8d-cluster-demo-CF
-      Version: '1.19'
-      RoleArn: arn:aws:iam::287330755957:role/str8d-iam-eks-role-demo-CF
+      Version: '1.24'
+      RoleArn: arn:aws:iam::287330755957:role/str8d-IAMRole-cluster-demo-CF
       ResourcesVpcConfig:
         SecurityGroupIds:
           - sg-0a1d12016944f4e28

@@ -1,0 +1,17 @@
+Resources:
+  EKSSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupName: str8d-eks_cluster_sg_CF
+      GroupDescription: Security group for EKS cluster
+      VpcId: vpc-03017bc4e4fcc0ad3
+      SecurityGroupIngress:
+      - IpProtocol: tcp
+        FromPort: 0
+        ToPort: 65535
+        CidrIp: 172.31.0.0/16
+      Tags:
+        - Key: "LabName"
+          Value: "see tag history for details"
+        - Key: "ManagedBy"
+          Value: "CloudFormation"
